@@ -1,0 +1,385 @@
+/*?     Main Styles     */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #2c3e50;
+    font-family: "Poppins", sans-serif;
+}
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+    .ulinks {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+.nav-active {
+    transform: translate(0%);
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*?     HomePage Styles     */
+
+.welcome {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0px;
+}
+.wcText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 40px;
+    animation: wta 1s ease;
+}
+.esText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    opacity: 0;
+    animation: eta 1s ease forwards 1s;
+}
+@keyframes wta {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes eta {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.links {
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+    font-family: "Poppins", sans-serif;
+    margin: 5px;
+    width: 350px;
+}
+.ulinks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ulinks li {
+    list-style: none;
+    padding: 5px;
+    border: 2px solid rgb(226, 226, 226);
+}
+.ulinks a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.link1:hover,
+.link2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 8px black;
+}
+.link1 {
+    animation: ulinkmationrev 1s ease;
+    transition: 0.4s ease;
+}
+.link2 {
+    animation: ulinkmation 2s ease;
+    transition: 0.4s ease;
+}
+@keyframes ulinkmation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes ulinkmationrev {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*?     AboutPage Styles     */
+
+.aboutMi {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.amtnp {
+    margin-bottom: 0px;
+}
+.amText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 40px;
+    animation-name: tAnim;
+    animation-duration: 1s;
+}
+p {
+    font-family: "Poppins", sans-Serif;
+    color: White;
+    font-weight: 150;
+    letter-spacing: 3px;
+}
+.amp {
+    animation-name: pAnim;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(200px);
+    opacity: 0;
+}
+#tas {
+    animation-timing-function: ease;
+}
+#pas {
+    animation-timing-function: ease;
+}
+@keyframes tAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes pAnim {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.smeds {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    opacity: 0;
+    animation: sma 1s ease forwards 2s;
+}
+.smedb {
+    transition: transform 1.5s ease;
+}
+.smeds div {
+    margin: 0px 20px;
+}
+.smedb:hover {
+    transform: rotate(360deg);
+    border: 2px solid rgb(30, 30, 30);
+    border-radius: 40px;
+}
+@keyframes sma {
+    from {
+        opacity: 0;
+        transform: translateY(180px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*?     ProjectsPage Styles     */
+
+.isi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.isi a {
+    text-decoration: inherit;
+    text-align: center;
+}
+.projectTxt {
+    color: rgb(226, 226, 226);
+    font-family: "Poppns", sans-serif;
+    font-size: 40px;
+    text-decoration: underline;
+    animation: pTxt 1s ease;
+}
+.line {
+    background: rgb(226, 226, 226);
+    width: 100%;
+    height: 5px;
+    margin: 10px;
+    opacity: 0;
+    animation: line 1s ease forwards 0.5s;
+}
+.isi a button {
+    background: none;
+    padding-bottom: 60px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+    transition: box-shadow 0.25s ease;
+    opacity: 0;
+    animation: pBtn 1s ease forwards 1s;
+    border: 3px solid white;
+}
+
+.isi a button:hover {
+    cursor: pointer;
+    box-shadow: -5px 10px 5px black;
+}
+@keyframes pTxt {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes line {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes pBtn {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
