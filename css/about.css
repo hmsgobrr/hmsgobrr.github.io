@@ -1,0 +1,115 @@
+.aboutMi {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0px;
+}
+.aboutMi::before {
+    content: "";
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    background: rgb(50, 50, 50);
+    box-shadow: 0px 10px 30px rgb(25, 25, 25);
+    z-index: -420;
+    animation: backrect 1s ease forwards 2s;
+}
+@keyframes backrect {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+.amtnp {
+    margin-bottom: 0px;
+}
+.amText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 40px;
+    animation-name: tAnim;
+    animation-duration: 1s;
+}
+p {
+    font-family: "Poppins", sans-Serif;
+    color: White;
+    font-weight: 150;
+    letter-spacing: 3px;
+}
+.amp {
+    animation-name: pAnim;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(200px);
+    opacity: 0;
+    max-width: 610px;
+}
+#tas {
+    animation-timing-function: ease;
+}
+#pas {
+    animation-timing-function: ease;
+}
+@keyframes tAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes pAnim {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.smeds {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    opacity: 0;
+    animation: sma 1s ease forwards 2s;
+}
+.smedb {
+    transition: transform 1.5s ease;
+}
+.smeds div {
+    margin: 0px 20px;
+}
+.smedb:hover {
+    transform: rotate(360deg);
+    border: 2px solid rgba(30, 30, 30, 0);
+}
+@keyframes sma {
+    from {
+        opacity: 0;
+        transform: translateY(180px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

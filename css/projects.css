@@ -1,0 +1,110 @@
+@font-face {
+    font-family: projfont;
+    src: url(../assets/BebasNeue-Regular.ttf);
+}
+
+.isi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+.isi a {
+    text-decoration: inherit;
+    text-align: center;
+}
+.projectTxt {
+    color: rgb(226, 226, 226);
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    text-decoration: underline;
+    animation: pTxt 1s ease;
+}
+.line {
+    background: rgb(226, 226, 226);
+    width: 100%;
+    height: 5px;
+    /* margin: 10px; */
+    border-style: solid;
+    border-color: rgba(30, 30, 30, 255);
+    border-width: 0px 20px;
+    opacity: 0;
+    animation: line 1s ease forwards 0.5s;
+}
+.isi a button {
+    background: none;
+    padding-bottom: 60px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+    transition: box-shadow 0.25s ease;
+    opacity: 0;
+    font-size: 24px;
+    font-family: projfont;
+    color: rgb(226, 226, 226);
+    font-weight: bolder;
+    animation: pBtn 1s ease forwards 1s;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+}
+.isi a button .desc {
+    font-size: 11px;
+    font-family: projfont;
+    color:  rgb(160, 160, 150);
+}
+.isi a button .gamemark {
+    font-size: 11px;
+    font-family: projfont;
+    color:  rgb(87, 181, 59);
+}
+.isi a button .redmark {
+    font-size: 11px;
+    font-family: projfont;
+    color:  rgb(181, 181, 59);
+}
+.isi a button:hover {
+    cursor: pointer;
+    box-shadow: -5px 10px 5px black;
+}
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@keyframes pTxt {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes line {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes pBtn {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

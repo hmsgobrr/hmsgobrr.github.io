@@ -1,0 +1,135 @@
+.welcome {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0px;
+}
+.welcome::before {
+    content: "";
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform-origin: left top;
+    transform: rotate(0deg) translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background: rgb(50, 50, 50);
+    box-shadow: 0px 10px 30px rgb(25, 25, 25);
+    z-index: -420;
+    animation: backbox 1s ease forwards 1s;
+}
+@keyframes backbox {
+    from {
+        width: 0px;
+        height: 0px;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    to {
+        width: 360px;
+        height: 360px;
+        transform: rotate(45deg) translate(-50%, -50%);
+    }
+}
+.wcText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 40px;
+    animation: wta 1s ease;
+}
+.esText {
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    opacity: 0;
+    animation: eta 1s ease forwards 1s;
+}
+@keyframes wta {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes eta {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.links {
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+    font-family: "Poppins", sans-serif;
+    margin: 5px;
+    width: 300px;
+}
+.ulinks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ulinks li {
+    list-style: none;
+    padding: 5px;
+    border: 2px solid rgb(226, 226, 226);
+}
+.ulinks a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.link1:hover,
+.link2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 8px black;
+}
+.link1 {
+    animation: ulinkmationrev 1s ease;
+    transition: 0.4s ease;
+}
+.link2 {
+    animation: ulinkmation 2s ease;
+    transition: 0.4s ease;
+}
+@keyframes ulinkmation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes ulinkmationrev {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
