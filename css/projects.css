@@ -3,6 +3,9 @@
     src: url(../assets/BebasNeue-Regular.ttf);
 }
 
+body {
+    overflow-x: hidden;
+}
 .isi {
     position: absolute;
     top: 50%;
@@ -26,19 +29,15 @@
 }
 .line {
     background: rgb(226, 226, 226);
-    width: 100%;
+    max-width: 100%;
     height: 5px;
-    /* margin: 10px; */
-    border-style: solid;
-    border-color: rgba(30, 30, 30, 255);
-    border-width: 0px 20px;
+    margin: 5px 30px;
     opacity: 0;
     animation: line 1s ease forwards 0.5s;
 }
 .isi a button {
     background: none;
     padding-bottom: 60px;
-    text-align: center;
     width: 200px;
     height: 60px;
     margin: 10px;
@@ -51,6 +50,7 @@
     animation: pBtn 1s ease forwards 1s;
     border: 3px solid white;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding-top: 7px;
 }
