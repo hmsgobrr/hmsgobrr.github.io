@@ -25,6 +25,7 @@ body {
     font-size: 40px;
     text-decoration: underline;
     animation: pTxt 1s ease;
+    margin-top: 20px;
 }
 .line {
     background: rgb(226, 226, 226);

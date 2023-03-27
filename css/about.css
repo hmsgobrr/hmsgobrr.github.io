@@ -1,17 +1,22 @@
+@media screen and (max-width: 768px) {
+    .nav-links {
+        height: 400px !important;
+    }
+}
+
 .aboutMi {
     position: absolute;
     margin: 0;
     top: 50%;
     left: 50%;
-    text-align: center;
     transform: translate(-50%, -50%);
     width: 100vw;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 5px 0px;
+    justify-content: space-around;
+    padding: 5px 10px;
 }
 .aboutMi::before {
     content: "";
@@ -23,7 +28,7 @@
     width: 0%;
     height: 100%;
     background: rgb(50, 50, 50);
-    box-shadow: 0px 10px 30px rgb(25, 25, 25);
+    box-shadow: 0px 10px 30px rgb(25, 25, 25, 112);
     z-index: -420;
     animation: backrect 1s ease forwards 2s;
 }
@@ -35,8 +40,27 @@
         width: 100%;
     }
 }
+.mifoto {
+    max-width:90%;
+    max-height:90%;
+    box-shadow: 0px 10px 30px rgb(25, 25, 25);
+    opacity: 0;
+    animation: mifotoAnim 1s ease forwards 1s;
+}
+@keyframes mifotoAnim {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
 .amtnp {
     margin-bottom: 0px;
+    text-align: left;
 }
 .amText {
     font-family: "Poppins", sans-serif;
@@ -49,7 +73,7 @@ p {
     font-family: "Poppins", sans-Serif;
     color: White;
     font-weight: 150;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
 }
 .amp {
     animation-name: pAnim;
@@ -88,16 +112,26 @@ p {
 }
 .smeds {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 15px;
     opacity: 0;
-    animation: sma 1s ease forwards 2s;
+    animation: sma 1s ease forwards 1.75s;
 }
 .smedb {
-    transition: transform 1.5s ease;
+    border: 0px solid rgba(30, 30, 30, 0);
+    transition: 1.5s ease;
 }
 .smeds div {
-    margin: 0px 20px;
+    margin: 20px 20px;
+    animation: smeddivsAnim 1.75s ease forwards 1.75s;
+}
+@keyframes smeddivsAnim {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .smedb:hover {
     transform: rotate(360deg);
@@ -111,5 +145,76 @@ p {
     to {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+
+.achSection {
+    margin-top: 100vh;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: rgb(226, 226, 226);
+}
+.achievements {
+    position: absolute;
+    margin: 0;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    background: rgb(35, 35, 35);
+    box-shadow: 0px 10px 30px rgb(25, 25, 25, 112);
+}
+.achievements .mifoto {
+    opacity: 1;
+    animation: none ;
+}
+.achtext {
+    max-width: 800px;
+}
+.achtext h1 {
+    font-size: 40px;
+}
+.achtext ul {
+    list-style-position: inside;
+}
+.achtext ul li {
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 980px) {
+    .aboutMi {
+        margin-top: 20px;
+        flex-direction: column;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        height: auto;
+    }
+    .mifoto {
+        max-height: 300px;
+    }
+    .smeds {
+        flex-direction: row;
+    }
+    .achSection {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .achievements {
+        flex-direction: column;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        height: auto;
     }
 }
